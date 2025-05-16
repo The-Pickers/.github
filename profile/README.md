@@ -1,92 +1,96 @@
-## **🌎 이 앱이 기여하는 UN 지속가능개발목표(SDGs)**
+![title](https://github.com/user-attachments/assets/8a57303f-5b9f-4ec3-bb64-136c3dc4cd13)
 
-### **✅목표 11: 지속가능한 도시와 공동체 (Sustainable Cities and Communities)**
+## **🌎 SDGs (Sustainable Development Goals) Contributed by This App**
 
-- 지역 주민이 자발적으로 쓰레기를 정화하고 도시/자연 공간을 깨끗하게 유지
-- 지역 기반 정화 활동 기록, 지도 시각화 → 커뮤니티 활성화
+### **✅Goal 11: Sustainable Cities and Communities**
 
-### **✅목표 12: 책임 있는 소비와 생산 (Responsible Consumption and Production)**
+- Encourages local residents to voluntarily clean up litter and maintain urban/natural spaces
+- Records location-based cleanup activities and visualizes them on a map → promotes community engagement
 
-- 쓰레기의 심각성과 환경에 미치는 영향을 사용자에게 인식시킴
-- 플라스틱, 캔, 유리 등 분류 가능하면 **재활용 교육 기능도 포함 가능**
+### **✅Goal 12: Responsible Consumption and Production**
 
-### **✅목표 13: 기후변화 대응 (Climate Action)**
+- Raises user awareness of the severity and environmental impact of waste
+- Optional **recycling education feature** (e.g., categorize plastics, cans, glass, etc.)
 
-- 환경정화 활동을 통한 생태계 보호 → 온실가스 배출 간접 감소
-- LLM 메시지를 통해 기후 변화와 연결된 행동 결과 제공 가능
+### **✅Goal 13: Climate Action**
 
-### **✅목표 14: 해양 생태계 보존 (Life Below Water)**
+- Ecosystem preservation through environmental cleanup → indirect reduction of greenhouse gas emissions
+- Uses LLM-generated messages to link user actions to climate change impacts
 
-- 바닷가 쓰레기 제거 → 바다 생물 보호에 직접적 기여
-- “당신 덕분에 바다거북이 살 수 있었어요!” 같은 메시지도 이 목표에 맞음
+### **✅Goal 14: Life Below Water**
 
-### **✅목표 15: 육상 생태계 보존 (Life on Land)**
+- Coastal trash removal → directly contributes to marine life protection
+- Messages like “Thanks to you, a sea turtle was saved!” align with this goal
 
-- 산, 계곡, 숲 등 자연환경 정화 → 야생 동물 서식지 보호
-- 생태계 보전을 위한 개인의 실천 강조
+### **✅Goal 15: Life on Land**
 
-### **🎯문제 인식**
+- Cleans up mountains, valleys, forests → protects wildlife habitats
+- Highlights individual actions that contribute to ecosystem conservation
 
-1. *자연환경(바닷가, 산, 계곡 등)**에 쓰레기 투기가 심각하다.
-2. 자발적 청소 활동은 많지만, **지속적인 동기부여가 부족**하다.
-3. *게임화(게이미피케이션)**를 통해 자원봉사자들의 참여율을 높인다.
+### **🎯Problem Awareness**
 
----
-
-### **🧩핵심 기능**
-
-### **1. 🎥쓰레기 치운 후 사진 분석 + 점수화 (AI Vision)**
-
-- 사용자가 **치운후 사진**을 업로드
-- AI가 치워진 쓰레기 사진을 보고 얼만큼 치웠는지 확인
-- 정화 정도에 따라 **점수 매기기** (예: AF 등급 또는 0100점)
-- **난이도 보정**: 바닷가/산 등 환경 유형과 난이도 고려
-
-> ✅ 사용 기술: 이미지 세그멘테이션 (YOLOv8 + SAM), Optical Flow, Change Detection
-> 
+1. *Illegal dumping in natural environments* (beaches, mountains, valleys, etc.) is a serious issue  
+2. Many cleanup efforts exist but **lack sustained motivation**  
+3. **Gamification** boosts participation among volunteers
 
 ---
 
-### **2. 🧠LLM 기반 격려 피드백 생성**
+### **🧩Core Features**
 
-- 점수 결과를 바탕으로 **자연어 피드백 생성**
-- 예시 출력:
+### **1. 🎥Photo Analysis & Scoring (AI Vision)**
+
+- Users upload **after-cleanup photos**
+- AI analyzes how much trash was removed
+- Assigns scores based on cleanup level (e.g., grades like A–F or 0–100 points)
+- **Difficulty adjustment**: considers environment type such as beach or mountain
+
+> ✅ Technologies: Image Segmentation (YOLOv8 + SAM), Optical Flow, Change Detection
+
+---
+
+### **2. 🧠LLM-based Encouragement Feedback Generation**
+
+- Generates **natural language feedback** based on scores
+- Example output:
 
 <aside>
 💡
 
-축하해요! 바닷가에서 약 3kg의 플라스틱을 치웠어요. 당신 덕분에 바다거북 1마리가 생명을 구할 수 있었어요! 💙
+Congratulations! You cleaned about 3kg of plastic from the beach. Thanks to you, a sea turtle’s life was saved! 💙
 
 </aside>
 
-- 환경 영향에 대한 시뮬레이션적 메시지도 제공
-    - “이 쓰레기를 치우지 않았다면 5년간 썩지 않았을 거예요.”
+- Simulated environmental impact messages also provided
+    - “If this trash hadn't been removed, it would’ve taken 5 years to decompose.”
 
-> ✅ 사용 기술: GPT API 또는 자체 LLM + 쓰레기 영향 DB 기반 프롬프트 커스터마이징
-> 
-
----
-
-### **3. 🗺️ 위치 기반 활동 시각화**
-
-- 사용자 위치 기반으로 활동을 지도에 기록
-- **지역별 쓰레기 정화 점수 집계**
-    - 동네/지역별 리더보드
-- 내가 치운 쓰레기 누적량, 참여 횟수 등 **개인 통계 대시보드**
-
-> ✅ 사용 기술: GPS 연동, Map API (Kakao, Google Maps)
-> 
+> ✅ Technologies: Gemini API prompt customization using a trash impact database
 
 ---
 
-### **🎮**
+### **3. 🗺️ Location-Based Activity Visualization**
 
-### **추가적인 게임 요소들**
+- Logs cleanup activities based on user GPS location
+- **Aggregates cleanup scores by region**
+    - Neighborhood/regional leaderboards
+- Personal dashboard showing total trash cleaned, number of participations, etc.
 
-- **레벨업 시스템**: 치운 쓰레기 양/점수에 따라 레벨 상승
-- **칭호 시스템**: “계곡 정령”, “바다 수호자” 같은 뱃지 제공
-- 팀 시스템 : 길드나 파티시스템을 추가해 팀별로 봉사일정을 정하거나 점수를 얻어 경쟁한다
-- 랭킹 시스템 : 개인 점수를 바탕으로 다른 사람들과 교류해서 경쟁한다.
-- **일일 퀘스트**: “오늘은 플라스틱만 모아보자!”, “쓰레기 3kg 이상 치우기”
-- **친구 초대/협동 모드**: 친구들과 함께 지역 정화 도전
-- **리워드 시스템**: 기념품, 기부 포인트, 환경 단체 연계
+> ✅ Technologies: GPS integration,FusedLocationProviderClient
+
+---
+
+### **🎮(Expected)Additional Game Elements**
+
+- **Level-up system**: Users level up based on trash amount/score
+- **Title system**: Earn badges like “Valley Spirit,” “Sea Guardian”
+- **Team system**: Join guilds or parties to plan cleanup missions or compete in team scores
+- **Ranking system**: Compete with others based on personal scores
+- **Daily quests**: “Collect only plastics today!”, “Clean more than 3kg of trash”
+- **Friend invite/co-op mode**: Tackle cleanup challenges with friends
+- **Reward system**: Earn souvenirs, donation points, or connect with environmental organizations
+
+---
+### Feature
+![poster1](https://github.com/user-attachments/assets/8db3929a-a285-4235-a329-94b31b33bb6d)
+![poster2](https://github.com/user-attachments/assets/ad02900b-858f-49e3-8922-70481c3d1467)
+
+
